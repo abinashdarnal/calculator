@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div
+      class="container flex justify-center items-center text-white w-full h-screen"
+    >
+      <div class="calculator bg-black p-[1.5rem] w-[280px] rounded-xl">
+        <div class="inputBox h-11 w-full">
+          <input
+            type="text"
+            name="text"
+            id="calculations"
+            class="bg-black border-0 h-full w-full text-right text-3xl"
+            value=""
+          />
+        </div>
+        <div class="btns grid grid-cols-4 gap-2 text-xl mt-3">
+          <button
+            class="actionBtn C"
+            onclick="document.querySelector('#calculations').value = ''"
+          >
+            C
+          </button>
+          <button class="actionBtn plusMinus" onclick="backSpace()">
+            <i class="bx bx-arrow-back text-white"></i>
+          </button>
+          <button
+            class="actionBtn percent"
+            onclick="document.querySelector('#calculations').value += '%'"
+          >
+            %
+          </button>
+          <button
+            class="calculateBtn divide"
+            onclick="document.querySelector('#calculations').value += '/'"
+          >
+            /
+          </button>
+          <button
+            class="numKey 7"
+            onclick="document.querySelector('#calculations').value += '7'"
+          >
+            7
+          </button>
+          <button
+            class="numKey 8"
+            onclick="document.querySelector('#calculations').value += '8'"
+          >
+            8
+          </button>
+          <button
+            class="numKey 9"
+            onclick="document.querySelector('#calculations').value += '9'"
+          >
+            9
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '*'"
+            class="calculateBtn muliply"
+          >
+            x
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '4'"
+            class="numKey 4"
+          >
+            4
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '5'"
+            class="numKey 5"
+          >
+            5
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '6'"
+            class="numKey 6"
+          >
+            6
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '-'"
+            class="calculateBtn minus"
+          >
+            -
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '1'"
+            class="numKey 1"
+          >
+            1
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '2'"
+            class="numKey 2"
+          >
+            2
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '3'"
+            class="numKey 3"
+          >
+            3
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '+'"
+            class="calculateBtn plus"
+          >
+            +
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '0'"
+            class="zero col-span-2 w-full"
+          >
+            0
+          </button>
+          <button
+            onclick="document.querySelector('#calculations').value += '.'"
+            class="numKey dot"
+          >
+            .
+          </button>
+          <button
+            onclick="calculatedResult()"
+            class="calculateBtn"
+            id="equalTo"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
